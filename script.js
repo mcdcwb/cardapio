@@ -8,6 +8,7 @@ const closeModalBtn = document.getElementById("close-modal-btn")
 const cartCounter = document.getElementById("cart-count")
 const addressInput = document.getElementById("address")
 const addressWarn = document.getElementById("address-warn")
+const restaurantClosed = document.getElementById("restaurant-closed")
 
 let cart = [];
 
@@ -77,13 +78,13 @@ function updateCartModal() {
         cartItemsElement.innerHTML = `
             <div class="flex items-center justify-between">
                 <div>
-                    <p class="font-medium">${item.name}</p>
+                    <p class="font-bold">${item.name}</p>
                     <p>Qtd: ${item.quantity}</p>
-                    <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
+                    <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}<br/><br/></p>
                 </div>
 
            
-                <button class="remove-from-cart-btn" data-name="${item.name}">
+                <button class="remove-from-cart-btn text-red-500" data-name="${item.name}">
                     Remover
                 </button>
             
@@ -131,4 +132,85 @@ function removeItemCart(name) {
         cart.splice(index, 1);
         updateCartModal();
     }
+}
+
+addressInput.addEventListener("input", function(event) {
+    let inputValue = event.target.value;
+
+    if(inputValue !== "") {
+        addressInput.classList.remove("border-red-500")
+        addressWarn.classList.add("hidden")
+    }
+})
+
+
+checkoutBtn.addEventListener("click", function() {
+
+    const isOpen = checkRestaurantOpen();
+    if(!isOpen) {
+
+        Toastify({
+            text: "Restaurante fechado!\n Horário de funcionamento:\nTer à Dom - 17:00 às 23:59",
+            duration: 3500,
+            close: true,
+            gravity: "top",
+            position: "center",
+            stopOnFocus: true,
+            style: {
+            background: "#ef4444",
+            },
+        }).showToast();
+        
+        return;
+   }
+    
+   
+    if(cart.length === 0) return;
+
+    if(addressInput.value === "") {
+        addressWarn.classList.remove("hidden")
+        addressInput.classList.add("border-red-500")
+    }
+
+
+
+//SEND IN WHATSAPP
+const cartItems = cart.map((item) => {
+    return (
+        `\n- ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price.toFixed(2)}. \n`
+    )
+}).join("")
+
+const message = encodeURIComponent(cartItems)
+const phone = "41997458063"
+const space= `\n`
+
+window.open(`https://wa.me/${phone}?text=Olá, esse é o meu pedido: ${space} ${message}Endereço: ${addressInput.value}` , "_blank" )
+
+cart = [];
+updateCartModal();
+
+})
+
+
+
+
+function checkRestaurantOpen() {
+    const data = new Date();
+    const hour = data.getHours();
+    return hour >= 17 && hour <21;
+}
+
+const spanItem = document.getElementById("date-span")
+const isOpen = checkRestaurantOpen();
+
+if(isOpen) {
+    spanItem.classList.remove("bg-red-500");
+    spanItem.classList.add("bg-green-600")
+    restaurantClosed.classList.add("hidden")
+}
+else {
+    spanItem.classList.remove("bg-green-600")
+    spanItem.classList.add("bg-red-500")
+    restaurantClosed.classList.remove("hidden")
 }
