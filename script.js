@@ -134,16 +134,21 @@ function removeItemCart(name) {
     }
 }
 
+
+//EMPTY ADDRESS ERROR
 addressInput.addEventListener("input", function(event) {
     let inputValue = event.target.value;
 
     if(inputValue !== "") {
         addressInput.classList.remove("border-red-500")
         addressWarn.classList.add("hidden")
+
+        return;
     }
 })
 
 
+//CLOSED RESTAURANT
 checkoutBtn.addEventListener("click", function() {
 
     const isOpen = checkRestaurantOpen();
@@ -164,17 +169,19 @@ checkoutBtn.addEventListener("click", function() {
         return;
    }
     
-   
+//EMPTY ADDRESS RETURN
     if(cart.length === 0) return;
 
     if(addressInput.value === "") {
         addressWarn.classList.remove("hidden")
         addressInput.classList.add("border-red-500")
+        
+        addressInput = [];
+        
     }
 
 
-
-//SEND IN WHATSAPP
+//SEND WHATSAPP MESSAGE
 const cartItems = cart.map((item) => {
     return (
         `\n- ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price.toFixed(2)}. \n`
@@ -187,18 +194,20 @@ const space= `\n`
 
 window.open(`https://wa.me/${phone}?text=Olá, esse é o meu pedido: ${space} ${message}Endereço: ${addressInput.value}` , "_blank" )
 
+
+
+
 cart = [];
 updateCartModal();
 
 })
 
 
-
-
+//RESTAURANT OPENING HOURS
 function checkRestaurantOpen() {
     const data = new Date();
     const hour = data.getHours();
-    return hour >= 17 && hour <21;
+    return hour >= 17 && hour < 24;
 }
 
 const spanItem = document.getElementById("date-span")
