@@ -47,12 +47,35 @@ menu.addEventListener("click", function(event) {
 
 })
 
+
+//EMPTY CART
+checkoutBtn.addEventListener("click", function(event) {
+    if (cart.length === 0) {
+        Toastify({
+            text: `CARRINHO VAZIO!`,
+            duration: 3000,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "#cc0000",
+            close: true,
+            style: {
+                color: "#fff",
+                fontSize: "16px",
+            },
+        })
+        .showToast();
+        event.preventDefault();
+    }
+});
+
+
 // ADD TO CART
 function addToCart(name, price) {
     const existingItem = cart.find(item => item.name === name)
 
     if(existingItem) {
         existingItem.quantity += 1;
+            
         
     }else{
     
@@ -64,7 +87,23 @@ function addToCart(name, price) {
     }
 
     updateCartModal()
+
+    Toastify({
+        text: `${name} adicionado ao carrinho! Preço: R$${price.toFixed(2)}`,
+        duration: 8000,
+        gravity: "top",
+        position: "left",
+        backgroundColor: "#4CAF50",
+        close: true,
+        style: {
+            color: "#fff",
+            fontSize: "14px",
+        },
+    })
+    .showToast();
 }
+
+
 
 //ATT CART
 function updateCartModal() {
@@ -113,8 +152,24 @@ cartItemsContainer.addEventListener("click", function(event){
     if(event.target.classList.contains("remove-from-cart-btn")){
         const name = event.target.getAttribute("data-name")
 
+        Toastify({
+            text: `${name} removido do carrinho!`,
+            duration: 8000,
+            gravity: "top",
+            position: "left",
+            backgroundColor: "#D21404",
+            close: true,
+            style: {
+                color: "#fff",
+                fontSize: "14px",
+            },
+        })
+        .showToast();
+
         removeItemCart(name);
     }
+
+
 })
 
 function removeItemCart(name) {
@@ -168,7 +223,7 @@ checkoutBtn.addEventListener("click", function() {
         
         return;
    }
-    
+   
 //EMPTY ADDRESS RETURN
     if(cart.length === 0) return;
 
