@@ -123,7 +123,7 @@ function updateCartModal() {
                 </div>
 
            
-                <button class="remove-from-cart-btn text-red-500" data-name="${item.name}">
+                <button class="remove-from-cart-btn hover:font-bold text-red-500" data-name="${item.name}">
                     Remover
                 </button>
             
