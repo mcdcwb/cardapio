@@ -90,7 +90,7 @@ function addToCart(name, price) {
 
     Toastify({
         text: `${name} adicionado ao carrinho! Preço: R$${price.toFixed(2)}`,
-        duration: 8000,
+        duration: 3000,
         gravity: "top",
         position: "left",
         backgroundColor: "#4CAF50",
@@ -111,15 +111,17 @@ function updateCartModal() {
     let total = 0;
 
     cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+
         const cartItemsElement = document.createElement("div");
         cartItemsElement.classList.add("flex", "justify-between", "mb-4", "flex-col")
 
         cartItemsElement.innerHTML = `
             <div class="flex items-center justify-between">
                 <div>
-                    <p class="font-bold">${item.name}</p>
-                    <p>Qtd: ${item.quantity}</p>
-                    <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}<br/><br/></p>
+                    <p class="font-bold">· ${item.name}</p>
+                    <p class="text-sm">Qtd: <spam class="font-bold">${item.quantity}</spam>. | Valor Un.: <span class="text-sm italic">R$ ${item.price.toFixed(2)}</span>.</p>
+                    <p class="mt-1 mb-2">Valor Total: <spam class="font-bold">R$ ${itemTotal.toFixed(2)}</spam>.</p>
                 </div>
 
            
@@ -154,7 +156,7 @@ cartItemsContainer.addEventListener("click", function(event){
 
         Toastify({
             text: `${name} removido do carrinho!`,
-            duration: 8000,
+            duration: 2500,
             gravity: "top",
             position: "left",
             backgroundColor: "#D21404",
@@ -235,22 +237,20 @@ checkoutBtn.addEventListener("click", function() {
         
     }
 
-
-//SEND WHATSAPP MESSAGE
+//SEND WHATSAPP
+const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 const cartItems = cart.map((item) => {
-    return (
-        `\n- ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price.toFixed(2)}. \n`
-    )
-}).join("")
+    const itemTotal = item.price * item.quantity;
+    return ` · Qtd: *(${item.quantity}x)* ${item.name}. \nPreço: *R$${itemTotal.toFixed(2)}*.\n\n`;
+}).join("");
 
-const message = encodeURIComponent(cartItems)
-const phone = "41997458063"
-const space= `\n`
+const message = encodeURIComponent(
+    `Olá, esse é o meu pedido:\n\n${cartItems}Endereço: _${addressInput.value}_ \n\nValor Total: *R$${total.toFixed(2)}*.`
+);
 
-window.open(`https://wa.me/${phone}?text=Olá, esse é o meu pedido: ${space} ${message}Endereço: ${addressInput.value}` , "_blank" )
+const phone = "41997458063";
 
-
-
+window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 
 cart = [];
 updateCartModal();
