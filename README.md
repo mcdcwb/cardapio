@@ -4,7 +4,7 @@
  
 https://cardapio-khaki-nine.vercel.app/
 
-Projeto desenvolvido para restaurante, oferecendo aos clientes uma experiência simples e intuitiva para visualizar o menu, adicionar produtos ao carrinho e finalizar pedidos diretamente pelo WhatsApp.</br>
+Projeto responsivo desenvolvido para restaurante, oferecendo aos clientes uma experiência simples e intuitiva para visualizar o menu, adicionar produtos ao carrinho e finalizar pedidos diretamente pelo WhatsApp.</br>
 
 
 ### Funcionalidades:
