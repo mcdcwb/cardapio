@@ -49,24 +49,24 @@ menu.addEventListener("click", function(event) {
 
 
 //EMPTY CART
-checkoutBtn.addEventListener("click", function(event) {
-    if (cart.length === 0) {
-        Toastify({
-            text: `CARRINHO VAZIO!`,
-            duration: 3000,
-            gravity: "top",
-            position: "center",
-            backgroundColor: "#cc0000",
-            close: true,
-            style: {
-                color: "#fff",
-                fontSize: "16px",
-            },
-        })
-        .showToast();
-        event.preventDefault();
-    }
-});
+// checkoutBtn.addEventListener("click", function(event) {
+//     if (cart.length === 0) {
+//         Toastify({
+//             text: `CARRINHO VAZIO!`,
+//             duration: 3000,
+//             gravity: "top",
+//             position: "center",
+//             backgroundColor: "#cc0000",
+//             close: true,
+//             style: {
+//                 color: "#fff",
+//                 fontSize: "16px",
+//             },
+//         })
+//         .showToast();
+//         event.preventDefault();
+//     }
+// });
 
 
 // ADD TO CART
@@ -205,8 +205,10 @@ addressInput.addEventListener("input", function(event) {
 })
 
 
+
+///
 //CLOSED RESTAURANT
-checkoutBtn.addEventListener("click", function() {
+checkoutBtn.addEventListener("click", function(event) {
 
     const isOpen = checkRestaurantOpen();
     if(!isOpen) {
@@ -223,19 +225,38 @@ checkoutBtn.addEventListener("click", function() {
             },
         }).showToast();
         
+        event.preventDefault();
         return;
-   }
+}
+
+if (cart.length === 0) {
+    
+    Toastify({
+        text: "CARRINHO VAZIO!",
+        duration: 2000,
+        gravity: "top",
+        position: "center",
+        backgroundColor: "#cc0000",
+        close: true,
+        style: {
+            color: "#fff",
+            fontSize: "16px",
+        },
+    }).showToast();
+
+    event.preventDefault();
+}
    
 //EMPTY ADDRESS RETURN
-    if(cart.length === 0) return;
+if(cart.length === 0) return;
 
-    if(addressInput.value === "") {
-        addressWarn.classList.remove("hidden")
-        addressInput.classList.add("border-red-500")
+if(addressInput.value === "") {
+    addressWarn.classList.remove("hidden")
+    addressInput.classList.add("border-red-500")
         
-        addressInput = [];
+    addressInput = [];
         
-    }
+}
 
 //SEND WHATSAPP
 const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -255,7 +276,9 @@ window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 cart = [];
 updateCartModal();
 
-})
+});
+///
+
 
 
 //RESTAURANT OPENING HOURS
