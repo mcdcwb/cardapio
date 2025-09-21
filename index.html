@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Dev Buguer - O melhor hamburguer Dev!"/>
-    <meta property="og:image" content="https://cardapio-khaki-nine.vercel.app/assets/hamb-1.png"/>
-    <meta property="og:description" content="O melhor lugar para se comer um hamburguer e programar!"/>
-    <meta property="og:site_name" content="DevBurguer"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dev Burguer - O melhor hamburguer Dev!" />
+    <meta property="og:image" content="https://cardapio-khaki-nine.vercel.app/assets/hamb-1.png" />
+    <meta property="og:description" content="O melhor lugar para se comer um hamburguer e programar!" />
+    <meta property="og:site_name" content="DevBurguer" />
 
 
 
@@ -23,7 +28,7 @@
     <title>Dev Burguer - A melhor hamburgueria dev!</title>
 </head>
 
-                                        <!-- npm run dev -->
+<!-- npm run dev -->
 
 <body>
 
@@ -33,7 +38,7 @@
     <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
         <div class="w-full h-full flex flex-col justify-center items-center">
             <img src="./assets/hamb-1.png" alt="Logo DevBurguer"
-            class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"/>
+                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200" />
 
             <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Dev Burguer</h1>
 
@@ -43,7 +48,7 @@
 
             <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
                 <span class="text-white font-medium">Ter à Dom - 17:00 às 23:59</span>
-            </div><br/>
+            </div><br />
             <p class="font-medium text-red-500 text-center hidden" id="restaurant-closed">Restaurante Fechado!</p>
         </div>
     </header>
@@ -70,15 +75,18 @@
 
             <!-- PRODUTO 1-->
             <div class="flex gap-5 mb-4">
-                <img src="./assets/hamb-1.png" alt="Hamburguer Duplo Smash Salada" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-            
+                <img src="./assets/hamb-1.png" alt="Hamburguer Duplo Smash Salada"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
                 <div class="flex flex-col justify-between flex-grow">
                     <p class="font-bold">Hamburguer Duplo Smash Salada</p>
-                    <p class="text-sm">Pão levinho de fermentação natural, 2x burguer 80g, tomate, alface, picles, queijo prato, queijo cheddar e maionese da casa.</p>
+                    <p class="text-sm">Pão levinho de fermentação natural, 2x burguer 80g, tomate, alface, picles,
+                        queijo prato, queijo cheddar e maionese da casa.</p>
 
                     <div class="flex gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$24,90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600" data-name="Hamburguer Duplo Smash Salada" data-price="24.90">
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600"
+                            data-name="Hamburguer Duplo Smash Salada" data-price="24.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
@@ -90,15 +98,18 @@
 
             <!-- PRODUTO 2-->
             <div class="flex gap-5 mb-4">
-                <img src="./assets/hamb-2.png" alt="Hamburguer Cheddar Bacon Duplo Smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-                    
+                <img src="./assets/hamb-2.png" alt="Hamburguer Cheddar Bacon Duplo Smash"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
                 <div class="flex flex-col justify-between flex-grow">
                     <p class="font-bold">Hamburguer Cheddar Bacon Duplo Smash</p>
-                    <p class="text-sm">Pão delicioso, 2x burguer 80g, queijo cheddar, tiras de bacon, ketchup e maionese da casa.</p>
-        
+                    <p class="text-sm">Pão delicioso, 2x burguer 80g, queijo cheddar, tiras de bacon, ketchup e maionese
+                        da casa.</p>
+
                     <div class="flex gap-2 justify-between mt-3">
-                            <p class="font-bold text-lg">R$32,90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600" data-name="Hamburguer Cheddar Bacon Duplo Smash" data-price="32.90">
+                        <p class="font-bold text-lg">R$32,90</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600"
+                            data-name="Hamburguer Cheddar Bacon Duplo Smash" data-price="32.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
@@ -110,15 +121,18 @@
 
             <!-- PRODUTO 3-->
             <div class="flex gap-5 mb-4">
-                <img src="./assets/hamb-3.png" alt="Hamburguer Duplo Smash Cheddar" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-                    
+                <img src="./assets/hamb-3.png" alt="Hamburguer Duplo Smash Cheddar"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
                 <div class="flex flex-col justify-between flex-grow">
                     <p class="font-bold">Hamburguer Duplo Smash Cheddar</p>
-                    <p class="text-sm">Pão levinho de fermentação natural, 2x burguer 160g, queijo cheddar e maionese da casa.</p>
-                
+                    <p class="text-sm">Pão levinho de fermentação natural, 2x burguer 160g, queijo cheddar e maionese da
+                        casa.</p>
+
                     <div class="flex gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$21,90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600" data-name="Hamburguer Duplo Smash Cheddar" data-price="21.90">
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600"
+                            data-name="Hamburguer Duplo Smash Cheddar" data-price="21.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
@@ -130,15 +144,18 @@
 
             <!-- PRODUTO 4-->
             <div class="flex gap-5 mb-4">
-                <img src="./assets/hamb-4.png" alt="Hamburguer Frango Salada" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-                    
+                <img src="./assets/hamb-4.png" alt="Hamburguer Frango Salada"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
                 <div class="flex flex-col justify-between flex-grow">
                     <p class="font-bold">Hamburguer Frango Salada</p>
-                    <p class="text-sm">Pão delicioso, 1x burguer frango 120g, tomate, cebola roxa, alface, picles e maionese da casa.</p>      
-        
+                    <p class="text-sm">Pão delicioso, 1x burguer frango 120g, tomate, cebola roxa, alface, picles e
+                        maionese da casa.</p>
+
                     <div class="flex gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$21,90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600" data-name="Hamburguer Frango Salada" data-price="21.90">
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600"
+                            data-name="Hamburguer Frango Salada" data-price="21.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
@@ -151,16 +168,19 @@
 
             <!-- PRODUTO 5-->
             <div class="flex gap-5 mb-4">
-                <img src="./assets/dog-1.jpg" alt="Hot Dog Frango Duplo" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-                    
+                <img src="./assets/dog-1.jpg" alt="Hot Dog Frango Duplo"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
                 <div class="flex flex-col justify-between flex-grow">
                     <p class="font-bold">Hot Dog Frango Duplo</p>
-                    <p class="text-sm">Pão de Hot Dog, 2x salsichas, frango desfiado, maionese, ervilha, milho, alface e tomate. Prensado após preparo.</p>       
-                    
+                    <p class="text-sm">Pão de Hot Dog, 2x salsichas, frango desfiado, maionese, ervilha, milho, alface e
+                        tomate. Prensado após preparo.</p>
+
 
                     <div class="flex gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$21,90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600" data-name="Hot Dog Frango Duplo" data-price="21.90">
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600"
+                            data-name="Hot Dog Frango Duplo" data-price="21.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
@@ -172,16 +192,19 @@
 
             <!-- PRODUTO 6-->
             <div class="flex gap-5 mb-4">
-                <img src="./assets/dog-2.jpeg" alt="Hot Dog Calabresa Duplo" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-                    
+                <img src="./assets/dog-2.jpeg" alt="Hot Dog Calabresa Duplo"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
                 <div class="flex flex-col justify-between flex-grow">
                     <p class="font-bold">Hot Dog Calabresa Duplo</p>
-                    <p class="text-sm">Pão de Hot Dog, 2x salsichas, calabresa, maionese, batata palha, milho e deliciosa farofa temperada. Prensado após preparo.</p>       
-                    
+                    <p class="text-sm">Pão de Hot Dog, 2x salsichas, calabresa, maionese, batata palha, milho e
+                        deliciosa farofa temperada. Prensado após preparo.</p>
+
 
                     <div class="flex gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$21,90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600" data-name="Hot Dog Calabresa Duplo" data-price="21.90">
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600"
+                            data-name="Hot Dog Calabresa Duplo" data-price="21.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
@@ -199,18 +222,20 @@
 
         <!-- GRID BEBIDAS -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-10 mx-auto max-w-7xl px-2 mb-24">
-            
+
             <!-- BEBIDA 1-->
             <div class="flex gap-2 mb-4">
-                <img src="./assets/refri-1.png" alt="Coca-Cola Lata 350ml" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-            
+                <img src="./assets/refri-1.png" alt="Coca-Cola Lata 350ml"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
                 <div class="flex flex-col justify-between flex-grow">
-                <p class="font-bold">Coca-Cola Lata 350ml</p>
-                <p class="text-sm">Refrigerante Coca-Cola lata 350ml. <br>Bebida gelada.</p>                
+                    <p class="font-bold">Coca-Cola Lata 350ml</p>
+                    <p class="text-sm">Refrigerante Coca-Cola lata 350ml. <br>Bebida gelada.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$4,90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600" data-name="Coca-Cola Lata 350ml" data-price="4.90">
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600"
+                            data-name="Coca-Cola Lata 350ml" data-price="4.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
@@ -222,15 +247,17 @@
 
             <!-- BEBIDA 2-->
             <div class="flex gap-2 mb-4">
-                <img src="./assets/refri-2.png" alt="Guaraná Antartica Lata 350ml" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-            
+                <img src="./assets/refri-2.png" alt="Guaraná Antartica Lata 350ml"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
                 <div class="flex flex-col justify-between flex-grow">
                     <p class="font-bold">Guaraná Antartica Lata 350ml</p>
-                    <p class="text-sm">Refrigerante Guaraná Antartica Lata 350ml. <br>Bebida gelada.</p>      
+                    <p class="text-sm">Refrigerante Guaraná Antartica Lata 350ml. <br>Bebida gelada.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$4,90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600" data-name="Guaraná Antartica Lata 350ml" data-price="4.90">
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600"
+                            data-name="Guaraná Antartica Lata 350ml" data-price="4.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
@@ -242,15 +269,17 @@
 
             <!-- BEBIDA 4-->
             <div class="flex gap-2 mb-4">
-                <img src="./assets/refri-3.png" alt="Fanta Laranja Lata 350ml" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-            
+                <img src="./assets/refri-3.png" alt="Fanta Laranja Lata 350ml"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
                 <div class="flex flex-col justify-between flex-grow">
                     <p class="font-bold">Fanta Laranja Lata 350ml</p>
-                    <p class="text-sm">Refrigerante Fanta Laranja Lata 350ml. <br>Bebida gelada.</p>      
+                    <p class="text-sm">Refrigerante Fanta Laranja Lata 350ml. <br>Bebida gelada.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$4,90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600" data-name="Fanta Laranja Lata 350ml" data-price="4.90">
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600"
+                            data-name="Fanta Laranja Lata 350ml" data-price="4.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
@@ -262,15 +291,17 @@
 
             <!-- BEBIDA 4-->
             <div class="flex gap-2 mb-4">
-                <img src="./assets/refri-4.png" alt="Sprite Lata 350ml" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"/>
-            
+                <img src="./assets/refri-4.png" alt="Sprite Lata 350ml"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+
                 <div class="flex flex-col justify-between flex-grow">
                     <p class="font-bold">Sprite Lata 350ml</p>
-                    <p class="text-sm">Refrigerante Sprite Lata 350ml. <br>Bebida gelada.</p>      
+                    <p class="text-sm">Refrigerante Sprite Lata 350ml. <br>Bebida gelada.</p>
 
                     <div class="flex items-center gap-2 justify-between mt-3">
                         <p class="font-bold text-lg">R$4,90</p>
-                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600" data-name="Sprite Lata 350ml" data-price="4.90">
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn hover:scale-110 hover:bg-green-600"
+                            data-name="Sprite Lata 350ml" data-price="4.90">
                             <i class="fa fa-cart-plus text-lg text-white"></i>
                         </button>
                     </div>
@@ -286,29 +317,52 @@
 
 
     <!-- MODAL CART -->
-    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] flex items-center justify-center hidden" id="cart-modal">
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] flex items-center justify-center hidden"
+        id="cart-modal">
         <div class="bg-white p-5 rounded-md min-w-[90%] max-w-[90%] md:min-w-[700px]">
             <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
-        
-            <div id="cart-items" class="flex justify-between mb-2 flex-col
+            <h3 class="text-start font-semibold text-2xl mb-2">Itens:</h2>
+
+
+                <div id="cart-items" class="flex justify-between mb-2 flex-col
             max-h-[400px] md:max-h-[600px] overflow-auto"></div>
 
-            <p class="font-bold text-lg mb-3 mt-4">Total do Pedido: <span id="cart-total">0.00</span></p>
+                <p class="font-bold text-lg mb-3 mt-4">Total do Pedido: <span id="cart-total">0.00</span></p>
 
-            <p class="font-bold mt-4">Endereço de Entrega:</p>
-            <input 
-            type="text" 
-            placeholder="Digite seu endereço completo" 
-            id="address" 
-            class="w-full border-2 p-1 rounded my-1"
-            />
+                <p class="font-bold mt-4">Endereço de Entrega:</p>
+                <input type="text" placeholder="Digite seu endereço completo" id="address"
+                    class="w-full border-2 p-1 rounded my-1" />
 
-            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+                <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
 
-            <div class="flex items-center justify-between mt-5 w-full">
-                <button class="hover:scale-105" id="close-modal-btn">Fechar</button>
-                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar pedido</button>
-            </div>
+                <p class="font-bold mt-4 mb-2">Forma de Pagamento:</p>
+                <label class="ml-2 mr-1">
+                    <input type="radio" name="pay" value="cartao" class="mb-4"> Cartão de crédito/débito
+                </label><br />
+                <label class="ml-2 mr-1">
+                    <input type="radio" name="pay" value="dinheiro"> Dinheiro
+                </label>
+
+                <div id="change-container" class="flex flex-row justify-between mt-3 hidden">
+                    <label>
+                        <p class="ml-2 mr-2">Troco para R$<input type="text" name="pay-2" id="change-input"
+                                class="border p-1 rounded w-[100px]" placeholder="0,00"> </p>
+                    </label><br />
+                    <label>
+                        <input type="checkbox" id="no-change" name="pay-2" class="ml-2 mr-1 mt-2 size-4">Não
+                        preciso de troco
+                    </label>
+                </div>
+
+
+
+
+
+                <div class="flex items-center justify-between mt-5 w-full">
+                    <button class="hover:scale-105 hover:text-red-900" id="close-modal-btn">Fechar</button>
+                    <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar
+                        pedido</button>
+                </div>
 
         </div>
     </div>
@@ -331,4 +385,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
