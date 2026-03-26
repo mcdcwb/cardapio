@@ -1,21 +1,52 @@
 
 
-## Cardápio - MIT License
- 
-https://cardapio-khaki-nine.vercel.app/
+# 🍔 Cardápio Digital - Hamburgueria
 
-Projeto responsivo desenvolvido para restaurante, oferecendo aos clientes uma experiência simples e intuitiva para visualizar o menu, adicionar produtos ao carrinho e finalizar pedidos diretamente pelo WhatsApp.</br>
+Aplicação web de cardápio digital interativo para hamburguerias, permitindo navegar entre os produtos, gerenciar o carrinho e finalizar pedidos via WhatsApp.
 
+## 📸 Preview
 
-### Funcionalidades:
-<div>
-<p>· Carrinho Dinâmico: Possível adicionar e remover itens.</p>
-<p>· Horário de funcionamento: Exibe o horário de funcionamento e quando a loja está fechada.</p>
-<p>· Finalização de Pedidos: Integrado ao WhatsApp.</p>
-<p>· Cards Flutuantes: Melhor visualização das informações ao usuário.</p>
-</div></br>
+<div align="center">
 
+<img src="./preview.gif" width="800"/>
 
+</div>
+
+🔗 **Demo:** https://cardapio-khaki-nine.vercel.app/
+
+<br>
+
+<div align="center">
+
+![status](https://img.shields.io/badge/status-active-success)
+![license](https://img.shields.io/badge/license-MIT-blue)
+
+</div>
+
+---
+
+## ✨ Features
+
+- 📋 Listagem dinâmica de produtos  
+- 🛒 Carrinho de compras interativo  
+- ➕ Adição e remoção de itens  
+- 💰 Cálculo automático do total  
+- ⏰ Status de funcionamento (aberto/fechado)  
+- 📱 Integração com WhatsApp  
+- 🎨 Interface responsiva  
+
+---
+
+## 📦 Como rodar o projeto
+
+```bash
+git clone https://github.com/mcdcwb/cardapio.git
+cd cardapio
+```
+
+---
+
+## 🚀 Stacks utilizadas:
 <div style="display: inline_block">
     <img align="center" alt="html5" src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
     <img align="center" alt="css" src="https://img.shields.io/badge/CSS3-1572B6?&style=for-the-badge&logo=css3&logoColor=white" />
