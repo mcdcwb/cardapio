@@ -234,10 +234,13 @@ checkoutBtn.addEventListener("click", function (event) {
         trocoText = `\u{1F4B5} Troco para: R$${changeInput.value}`;
     }
 
-    const message = `Olá, teste de emojis: 😊🏠`;
+    const message = encodeURIComponent(
+        `\u{1F4AC} Olá, esse é o meu pedido:\n\n${cartItems}\u{1F3E0} Endereço: _${addressInput.value}_\n\n${trocoText}\n\nValor Total: *R$${total.toFixed(2)}*.\n`
+    );
+
     const encodedMessage = encodeURIComponent(message);
     const phone = "41997458063";
-    window.open(`https://wa.me/${phone}?text=${encodedMessage}`, "_blank");
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 
     cart = [];
     updateCartModal();
