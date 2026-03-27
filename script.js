@@ -235,7 +235,7 @@ checkoutBtn.addEventListener("click", function (event) {
     }
 
     const message = `👨‍🍳 Olá, esse é o meu pedido:\n\n${cartItems}🏠 Endereço: _${addressInput.value}_\n\n${trocoText}\n\nValor Total: *R$${total.toFixed(2)}*.\n`;
-    const encodedMessage = encodeURIComponent(message);
+    
     const phone = "41997458063";
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 
