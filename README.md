@@ -21,6 +21,7 @@ Aplicação web de cardápio digital interativo para hamburguerias, permitindo n
 </table>
 
 🔗 **Demo:** https://cardapio-khaki-nine.vercel.app/
+
 ⚠️ Nota: O horário de funcionamento foi ajustado para das 04h às 03h apenas para fins de teste, permitindo acesso ao sistema na maior parte do dia.
 
 <br>
