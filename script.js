@@ -235,12 +235,15 @@ checkoutBtn.addEventListener("click", function (event) {
     }
 
     const message = encodeURIComponent(
-      `👨‍🍳 Olá, esse é o meu pedido:\n\n${cartItems}🏠 Endereço: _${addressInput.value}_\n\n${trocoText}\n\nValor Total: *R$${total.toFixed(2)}*.\n`
+        `\u{1F468}\u200D\u{1F373} Olá, esse é o meu pedido:\n\n${cartItems}\u{1F3E0} Endereço: _${addressInput.value}_\n\n${trocoText}\n\nValor Total: *R$${total.toFixed(2)}*.\n`
     );
 
     const encodedMessage = encodeURIComponent(message);
     const phone = "41997458063";
-    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+    window.open(
+        `https://api.whatsapp.com/send?phone=${phone}&text=${message}`,
+        "_blank"
+    );
 
     cart = [];
     updateCartModal();
@@ -250,7 +253,8 @@ checkoutBtn.addEventListener("click", function (event) {
 function checkRestaurantOpen() {
     const data = new Date();
     const hour = data.getHours();
-    return hour >= 17 && hour < 24;
+    return hour >= 4 || hour < 3;
+    // return hour >= 17 && hour < 23; #DESATIVADO PARA TESTES.
 }
 
 const spanItem = document.getElementById("date-span");
