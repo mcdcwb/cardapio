@@ -9,7 +9,10 @@ Aplicação web de cardápio digital interativo para hamburguerias, permitindo n
 <table align="center">
   <tr>
     <td valign="center">
-      <img src="./preview.gif" width="600"/>
+      <img src="./preview.gif" width="500"/>
+    </td>
+    <td valign="center">
+      <img src="./preview3.png" width="400"/>
     </td>
     <td valign="center">
       <img src="./preview2.gif" width="250"/>
