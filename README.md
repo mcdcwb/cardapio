@@ -19,7 +19,7 @@ Aplicação web de cardápio digital interativo para hamburguerias, permitindo n
   </tr>
   <tr>
     <td valign="center">
-      <img src="./preview2.gif" width="250"/>
+      <img src="./preview2.gif" width="300"/>
     </td>
   </tr>
 </table>
