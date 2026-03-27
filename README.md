@@ -6,11 +6,16 @@ Aplicação web de cardápio digital interativo para hamburguerias, permitindo n
 
 ## 📸 Preview
 
-<div align="center">
-
-<img src="./preview.gif" width="800"/>
-
-</div>
+<table align="center">
+  <tr>
+    <td valign="center">
+      <img src="./preview.gif" width="600"/>
+    </td>
+    <td valign="center">
+      <img src="./preview2.gif" width="300"/>
+    </td>
+  </tr>
+</table>
 
 🔗 **Demo:** https://cardapio-khaki-nine.vercel.app/
 
