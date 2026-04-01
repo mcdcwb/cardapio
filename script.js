@@ -157,7 +157,7 @@ cartItemsContainer.addEventListener("click", function (event) {
             duration: 2500,
             gravity: "top",
             position: "left",
-            backgroundColor: "#D21404",
+            backgroundColor: "#ef4444",
             close: true,
             style: { color: "#fff", fontSize: "14px" },
         }).showToast();
@@ -201,13 +201,28 @@ checkoutBtn.addEventListener("click", function (event) {
         return;
     }
 
+    const selected = document.querySelector('input[name="pay"]:checked');
+    if (!selected) {
+        Toastify({
+            text: "Escolha uma forma de pagamento!",
+            duration: 2000,
+            close: true,
+            gravity: "top",
+            position: "center",
+            backgroundColor: "#ef4444",
+            style: { color: "#fff", fontSize: "16px" },
+        }).showToast();
+        event.preventDefault();
+        return;
+    }
+
     if (cart.length === 0) {
         Toastify({
             text: "CARRINHO VAZIO!",
             duration: 2000,
             gravity: "top",
             position: "center",
-            backgroundColor: "#cc0000",
+            backgroundColor: "#ef4444",
             close: true,
             style: { color: "#fff", fontSize: "16px" },
         }).showToast();
@@ -228,10 +243,16 @@ checkoutBtn.addEventListener("click", function (event) {
         return ` \u25AB\uFE0F Qtd: *(${item.quantity}x)* ${item.name}.\nPreço: *R$${itemTotal.toFixed(2)}*.\n\n`;
     }).join("");
 
-    const dinheiroSelected = document.querySelector('input[name="pay"][value="dinheiro"]:checked');
-    let trocoText = "\u{1F4B3} Pagamento no cartão.";
-    if (dinheiroSelected && changeInput.value !== "") {
-        trocoText = `\u{1F4B5} Troco para: R$${changeInput.value}`;
+    const dinSelected = document.querySelector('input[name="pay"]:checked');
+
+    let trocoText = "💳 Pagamento no cartão.";
+
+    if (dinSelected && dinSelected.value === "dinheiro") {
+        if (changeInput.value.trim() !== "") {
+            trocoText = `💵 Pagamento em dinheiro.\nTroco para: R$${changeInput.value}`;
+        } else {
+            trocoText = "💵 Pagamento em dinheiro";
+        }
     }
 
     const message = encodeURIComponent(
